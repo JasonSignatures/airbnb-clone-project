@@ -145,9 +145,98 @@ Tracks the financial transactions for bookings.
 A payment is linked to one booking.  
 Each booking can have one corresponding payment record.
 
+## ⚙️ Feature Breakdown
+
+Below are the main features included in this Backend Development project, along with a brief description of their purpose and functionality.
+
 ---
 
-### **Entity R**
+### **1. User Management**
+Handles user registration, authentication, and authorization.  
+This feature ensures that users can securely sign up, log in, and access only the parts of the system relevant to their role (e.g., customer or property owner).
+
+---
+
+### **2. Property Management**
+Enables property owners to create, update, and manage property listings.  
+It allows for uploading property details such as title, location, price, and availability, forming the core data that customers interact with in the system.
+
+---
+
+### **3. Booking System**
+Allows users to book properties for specific dates and durations.  
+This feature handles booking validation, date availability checks, and ensures that overlapping bookings are prevented.
+
+---
+
+### **4. Review and Rating System**
+Lets users provide feedback and ratings for properties they have booked.  
+It helps maintain transparency and trust by giving potential customers insights based on previous user experiences.
+
+---
+
+### **5. Payment Processing**
+Facilitates secure online transactions for bookings.  
+It ensures that all payments are properly linked to bookings, supports multiple payment methods, and maintains transaction integrity.
+
+---
+
+### **6. Admin Dashboard**
+Provides administrative control for monitoring users, properties, and bookings.  
+Admins can
+
+## 🔒 API Security
+
+Security is a critical part of this backend system. The following measures ensure that data, users, and transactions are protected from unauthorized access and misuse.
+
+---
+
+### **1. Authentication**
+Authentication verifies the identity of users before granting access to the system.  
+This will be implemented using **JWT (JSON Web Tokens)** or **session-based authentication**, ensuring that only verified users can interact with protected endpoints.  
+**Why it matters:** Protects user accounts and prevents unauthorized access to private data.
+
+---
+
+### **2. Authorization**
+Authorization controls what authenticated users are allowed to do within the system.  
+Role-based access control (RBAC) will be used to differentiate permissions between regular users, property owners, and administrators.  
+**Why it matters:** Prevents users from performing restricted actions (e.g., non-admins deleting properties or viewing others’ data).
+
+---
+
+### **3. Data Encryption**
+Sensitive data such as passwords and payment details will be securely encrypted using hashing algorithms like **bcrypt** and SSL/TLS for data transmission.  
+**Why it matters:** Ensures user credentials and financial information are protected from data breaches and network interception.
+
+---
+
+### **4. Input Validation & Sanitization**
+All user inputs
+
+## ⚙️ CI/CD Pipeline
+
+### **What is CI/CD?**
+**CI/CD (Continuous Integration and Continuous Deployment)** is a DevOps practice that automates the process of building, testing, and deploying code.  
+It ensures that new features, bug fixes, and updates are integrated seamlessly into the main application without disrupting the production environment.
+
+---
+
+### **Why It’s Important**
+Implementing a CI/CD pipeline helps to:
+- **Increase development speed:** Automates repetitive tasks like testing and deployment.  
+- **Ensure reliability:** Detects bugs early through automated testing before code reaches production.  
+- **Maintain consistency:** Keeps environments stable and reduces the chances of human error.  
+- **Enable continuous delivery:** Ensures that every code change is production-ready at all times.
+
+---
+
+### **Tools Used**
+The following tools will be used (or can be integrated) to implement the CI/CD pipeline:
+
+- **GitHub Actions:** Automates build, test, and deployment workflows directly within the GitHub repository.  
+- **Docker:** Containerizes the backend application for consistent performance across develo
+
 
 
 
